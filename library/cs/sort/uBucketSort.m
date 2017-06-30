@@ -1,7 +1,7 @@
 function [result, order] = uBucketSort(x, o)
 %--------------------------------------------------------------------------
 % Syntax:       [result, order] = uBucketSort(x, o);
-% 
+%-------------------------------------------------------------------------
 % Definition:   Bucket sort, or bin sort, is a sorting algorithm that works
 %               by distributing the elements of an array into a number of 
 %               buckets. Each bucket is then sorted individually, either 
@@ -13,29 +13,29 @@ function [result, order] = uBucketSort(x, o)
 %               comparisons and therefore can also be considered a 
 %               comparison sort algorithm. The computational complexity 
 %               estimates involve the number of buckets [1].
-%               
+%-------------------------------------------------------------------------
 % Inputs:       [x] is a vector of length len
 %               'o' is order ('ascending' or 'descending'), 
 %                   default is 'ascending' 
-%               
+%-------------------------------------------------------------------------
 % Outputs:      [result] is the sorted version of x
 %               'order' is the order type 'ascending' or 'descending' 
-%                             
+%-------------------------------------------------------------------------
 % Complexity:   Ω(n+k)    Best-case performance
 %               Θ(n+k)    Average-case performance
 %               O(n^2)    Worst-case performance
 %               O(n.k)    Worst-case space complexity
-%
-% Dependencies  No dependency.
-%               
+%-------------------------------------------------------------------------
+% Dependencies: No dependency.
+%-------------------------------------------------------------------------
 % Author:       Ugur Ayan, PhD
 %               ugur.ayan@ugurayan.com.tr
 %               http://www.ugurayan.com.tr
-%               
-% Date:         May 5, 2016
-%
-% Refrences     [1] https://en.wikipedia.org/wiki/Bucket_sort
-%--------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+% Date:         May 8, 2016
+%-------------------------------------------------------------------------
+% References:   [1] https://en.wikipedia.org/wiki/Bucket_sort
+% -------------------------------------------------------------------------
     if nargin == 1
         order = 'ascending'; %default
     else
