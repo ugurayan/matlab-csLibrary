@@ -1,6 +1,6 @@
-function [result, order] = uRadixSort(x, r, o)
+function [result, order] = RadixSort(x, r, o)
 %--------------------------------------------------------------------------
-% Syntax:       [result, order] = uRadixSort(x, r, o);
+% Syntax:       [result, order] = RadixSort(x, r, o);
 %-------------------------------------------------------------------------
 % Definition:   Radix sort is a non-comparative integer sorting algorithm 
 %               that sorts data with integer keys by grouping keys by the

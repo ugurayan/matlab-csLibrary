@@ -1,6 +1,6 @@
-function [result, order] = uQuickSort(x, o)
+function [result, order] = QuickSort(x, o)
 %--------------------------------------------------------------------------
-% Syntax:       [result, order] = uQuickSort(x, o);
+% Syntax:       [result, order] = QuickSort(x, o);
 %-------------------------------------------------------------------------
 % Definition:   Quicksort (sometimes called partition-exchange sort) is an
 %               efficient sorting algorithm, serving as a systematic method

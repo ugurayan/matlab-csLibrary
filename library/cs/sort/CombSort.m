@@ -1,6 +1,6 @@
-function [result, order] = uCombSort(x,o)
+function [result, order] = CombSort(x,o)
 %--------------------------------------------------------------------------
-% Syntax:       [result, order] = uCombSort(x,o)
+% Syntax:       [result, order] = CombSort(x,o)
 %-------------------------------------------------------------------------
 % Definition:   Comb sort is a relatively simple sorting algorithm 
 %               originally designed by Włodzimierz Dobosiewicz in 1980 [1].

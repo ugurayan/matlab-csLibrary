@@ -1,6 +1,6 @@
-function [result, order] = uBubbleSort(x, o)
+function [result, order] = BubbleSort(x, o)
 %--------------------------------------------------------------------------
-% Syntax:       [result, order] = uBubbleSort(x, o);
+% Syntax:       [result, order] = BubbleSort(x, o);
 % 
 % Definition:   Bubble sort, sometimes referred to as sinking sort, is a 
 %               simple sorting algorithm that repeatedly steps through the 

@@ -1,6 +1,6 @@
-function [result, order] = uShellSort(x, o)
+function [result, order] = ShellSort(x, o)
 %--------------------------------------------------------------------------
-% Syntax:       [result, order] = uShellSort(x, o);
+% Syntax:       [result, order] = ShellSort(x, o);
 %-------------------------------------------------------------------------
 % Definition:   Heapsort is a comparison-based sorting algorithm. Heapsort
 %               can be thought of as an improved selection sort: like that

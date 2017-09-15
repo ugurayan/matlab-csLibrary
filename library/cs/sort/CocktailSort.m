@@ -1,6 +1,6 @@
-function [result, order] = uCocktailSort(x, o)
+function [result, order] = CocktailSort(x, o)
 %--------------------------------------------------------------------------
-% Syntax:       [result, order] = uCocktailSort(x, o);
+% Syntax:       [result, order] = CocktailSort(x, o);
 %-------------------------------------------------------------------------
 % Definition:   Cocktail shaker sort, also known as bidirectional bubble 
 %               sort, cocktail sort, shaker sort (which can also refer to 

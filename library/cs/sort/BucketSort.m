@@ -1,6 +1,6 @@
-function [result, order] = uBucketSort(x, o)
+function [result, order] = BucketSort(x, o)
 %--------------------------------------------------------------------------
-% Syntax:       [result, order] = uBucketSort(x, o);
+% Syntax:       [result, order] = BucketSort(x, o);
 %-------------------------------------------------------------------------
 % Definition:   Bucket sort, or bin sort, is a sorting algorithm that works
 %               by distributing the elements of an array into a number of 

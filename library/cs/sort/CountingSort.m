@@ -1,6 +1,6 @@
-function [result, order] = uCountingSort(x, r, o)
+function [result, order] = CountingSort(x, r, o)
 %--------------------------------------------------------------------------
-% Syntax:       [result, order] = uCountingSort(x, r, o);
+% Syntax:       [result, order] = CountingSort(x, r, o);
 %-------------------------------------------------------------------------
 % Definition:   Counting sort is an algorithm for sorting a collection of
 %               objects according to keys that are small integers; that is,

@@ -1,11 +1,15 @@
-function [result, order] = uInsertionSort(x, o)
+function [result, order] = SelectionSort(x, o)
 %--------------------------------------------------------------------------
-% Syntax:       [result, order] = uInsertionSort(x, o);
+% Syntax:       [result, order] = SelectionSort(x, o);
 %-------------------------------------------------------------------------
-% Definition:   Insertion sort is a simple sorting algorithm that builds 
-%               the final sorted array (or list) one item at a time. It is
-%               much less efficient on large lists than more advanced 
-%               algorithms [1].
+% Definition:   Selection sort is a sorting algorithm, specifically an 
+%               in-place comparison sort. It has O(n2) time complexity,
+%               making it inefficient on large lists, and generally
+%               performs worse than the similar insertion sort. Selection
+%               sort is noted for its simplicity, and it has performance
+%               advantages over more complicated algorithms in certain
+%               situations, particularly where auxiliary memory is 
+%               limited.[1].
 %-------------------------------------------------------------------------
 % Inputs:       [x] is a vector of length len
 %               'o' is order ('ascending' or 'descending'), 
@@ -14,10 +18,10 @@ function [result, order] = uInsertionSort(x, o)
 % Outputs:      [result] is the sorted version of x
 %               'order' is the order type 'ascending' or 'descending' 
 %-------------------------------------------------------------------------
-% Complexity:   O(n)      Best-case performance
+% Complexity:   O(n^2)    Best-case performance
 %               O(n^2)    Average-case performance
 %               O(n^2)    Worst-case performance
-%               O(n)      Worst-case space complexity
+%               O(1)-aux  Worst-case space complexity
 %-------------------------------------------------------------------------
 % Dependencies: No dependency.
 %-------------------------------------------------------------------------
@@ -25,19 +29,12 @@ function [result, order] = uInsertionSort(x, o)
 %               ugur.ayan@ugurayan.com.tr
 %               http://www.ugurayan.com.tr
 %-------------------------------------------------------------------------
-% Date:         May 21, 2016
+% Date:         April 1, 2016
 %-------------------------------------------------------------------------
-% References:   [1] https://en.wikipedia.org/wiki/Insertion_sort
+% References:   [1] https://en.wikipedia.org/wiki/Selection_sort
 % -------------------------------------------------------------------------
 % Pseudecode :
 %  
-% for i = 1 to length(A)
-%     j ← i
-%     while j > 0 and A[j-1] > A[j]
-%         swap A[j] and A[j-1]
-%         j ← j - 1
-%     end while
-% end for
 % -------------------------------------------------------------------------
 
     if nargin == 1
@@ -45,21 +42,32 @@ function [result, order] = uInsertionSort(x, o)
     else
         order = o;
     end
-
-    len = length(x);
-    for j = 2:len
-        pivot = x(j);
-        i = j;
-        while ((i > 1) && (x(i - 1) > pivot))
-            x(i) = x(i - 1);
-            i = i - 1;
-        end
-        x(i) = pivot;
-    end
     
-    if strcmp(order, 'ascending') 
-        result = x;
-    else
-        result = fliplr(x);
+    len = length(x);
+    for j = 1:(len - 1)
+        % Find jth smallest element
+        imin = j;
+        for i = (j + 1):len
+            if (x(i) < x(imin))
+                imin = i;
+            end
+        end
+
+        % Put jth smallest element in place
+        if (imin ~= j)
+            x = swap(x,imin,j);
+        end
     end
+    if strcmp(order, 'ascending') 
+            result = x;
+        else
+            result = fliplr(x);
+    end
+end
+
+
+function x = swap(x,i,j)
+    val = x(i);
+    x(i) = x(j);
+    x(j) = val;
 end

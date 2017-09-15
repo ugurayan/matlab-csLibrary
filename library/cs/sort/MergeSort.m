@@ -1,6 +1,6 @@
-function [result, order] = uMergeSort(x, o)
+function [result, order] = MergeSort(x, o)
 %--------------------------------------------------------------------------
-% Syntax:       [result, order] = uMergeSort(x, o);
+% Syntax:       [result, order] = MergeSort(x, o);
 %-------------------------------------------------------------------------
 % Definition:   Merge sort (also commonly spelled mergesort) is an 
 %               efficient, general-purpose, comparison-based sorting 
